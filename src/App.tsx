@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { PingContainer } from './ping';
+import AppRoutes from './AppRoutes';
 
 export class App extends React.Component {
     render() {
         return (
-            <PingContainer/>
+            <div>
+                <AppRoutes/>
+            </div>
         );
     }
 }
