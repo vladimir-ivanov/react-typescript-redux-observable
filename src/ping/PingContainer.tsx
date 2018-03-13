@@ -1,17 +1,15 @@
 import * as React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
-import { PING } from './pingActionTypes';
 import { getIsPinging } from './pingSelectors';
-
-// TODO - goes into actions
-const createPingAction = () => ({ type: PING });
+import { createPingAction } from './pingActions';
 
 interface PingProps {
     isPinging: boolean;
     ping: () => void;
 }
 
-class PingContainer extends React.Component<PingProps> {
+class PingContainer extends Component<PingProps> {
     render() {
         const { isPinging, ping } = this.props;
 

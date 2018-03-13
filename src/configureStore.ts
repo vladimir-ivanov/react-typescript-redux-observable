@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
-import { pingEpic } from './ping/pingEpics';
-import { pingReducerStore } from './ping/pingReducer';
+import { pingReducerStore } from './ping';
+import { pingEpic } from './ping';
 
 const rootEpic = combineEpics(
     pingEpic
